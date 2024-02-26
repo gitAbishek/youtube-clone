@@ -5,7 +5,6 @@ import { useState } from "react";
 import Search from "../form/Search";
 import { useNavigate } from "react-router-dom";
 
-
 interface Props {
   onSearchQuerySelected: (query: string) => unknown;
 }
@@ -15,7 +14,6 @@ const Navbar = ({ onSearchQuerySelected }: Props) => {
   const navigate = useNavigate();
 
   const handleClickNavigate = () => {
-    console.log("hello");
     navigate("/");
   }
 
