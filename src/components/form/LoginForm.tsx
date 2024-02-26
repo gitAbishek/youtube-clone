@@ -7,9 +7,11 @@ import {
 import UserName from "./components/UserName";
 import Password from "./components/Password";
 import { useContextStore } from "../../context/context.consumer";
+import { useState } from "react";
 
 
 const LoginForm = () => {
+  const [isError, setIsError] = useState<boolean>(false);
   const methods = useForm();
   const { setIsLoggedIn } = useContextStore();
 
@@ -18,11 +20,13 @@ const LoginForm = () => {
     if (data && data.userName === "abishek" && data.password === "abishek") {
       localStorage.setItem("isLoggedIn", "true");
       setIsLoggedIn("true");
+    }else{
+      setIsError(true);
     }
   };
 
   return (
-    <div className="flex justify-center items-center h-[70vh] w-1/2">
+    <div className="flex justify-center items-center h-[80vh] w-full md:w-1/2 lg:w-1/3  px-10">
       <FormProvider {...methods}>
         <form
           onSubmit={methods.handleSubmit(onSubmit)}
@@ -34,6 +38,10 @@ const LoginForm = () => {
             </div>
             <UserName />
             <Password />
+
+            {
+              isError && <div className="text-red-500">Invalid credentials</div>
+            }
 
             <button className="text-gray-200 bg-[#575656] hover:bg-[#0F0F0F] hover:border hover:border-[#303030] p-2 rounded-full mt-5 text-sm ">
               Login
