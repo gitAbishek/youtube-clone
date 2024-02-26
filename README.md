@@ -4,7 +4,7 @@ This project was bootstrapped with Vite and uses React.
 
 ## Table of Contents
 
-- [Getting Started](#getting-started)
+  - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Restriction]
@@ -38,7 +38,7 @@ Make sure you have Node.js installed on your machine. The Node version should be
    
 ### Restriction
 
-maximum 10 data has been fetched due to limited api calls
+maximum 20 data has been fetched due to limited api calls
 
 
 

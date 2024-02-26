@@ -16,7 +16,7 @@ export const useGetAllYoutubeVideos = (query: string) =>
         params: {
           part: "snippet",
           key: VITE_OPEN_YOUTUBE_API_KEY,
-          maxResults: 10,
+          maxResults: 20,
           q: query,
         },
       }),
