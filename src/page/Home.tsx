@@ -23,9 +23,11 @@ interface Props {
 const Home: React.FC<Props> = ({ searchQuery }: Props) => {
   const { data: searchResult } = useGetAllYoutubeVideos(searchQuery);
 
+  console.log(searchResult,"searchResult");
+
   const onVideoClick = (videoId: string) => {
-    const externalUrl = `http://localhost:5173/video-player/${videoId}`;
-    window.open(externalUrl, "_blank");
+    const externalUrl = `http://localhost:5174/video-player/${videoId}`;
+    window.location.href = externalUrl;
   };
 
   return (

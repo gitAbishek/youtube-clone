@@ -15,6 +15,7 @@ const Navbar = ({ onSearchQuerySelected }: Props) => {
   const navigate = useNavigate();
 
   const handleClickNavigate = () => {
+    console.log("hello");
     navigate("/");
   }
 
