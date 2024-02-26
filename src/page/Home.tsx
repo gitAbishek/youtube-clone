@@ -25,7 +25,7 @@ const Home: React.FC<Props> = ({ searchQuery }: Props) => {
 
   const onVideoClick = (videoId: string) => {
     const externalUrl = `http://localhost:5173/video-player/${videoId}`;
-    window.location.href = externalUrl;
+    window.open(externalUrl, "_blank");
   };
 
   return (
